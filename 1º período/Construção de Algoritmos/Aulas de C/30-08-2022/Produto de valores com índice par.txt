@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<locale.h>
+#include <math.h>
+#define TAM 10
+
+int main()
+{
+    setlocale(LC_ALL, "");
+    int cont, val[TAM], prod=1;
+
+    for(cont=0;cont<TAM;cont++){
+        printf("Valor %i -> ",cont);
+        scanf("%i",&val[cont]);
+        if(cont%2 == 0)
+            prod*=val[cont];
+    }
+    printf("%i",prod);
+
+
+    return 0;
+}

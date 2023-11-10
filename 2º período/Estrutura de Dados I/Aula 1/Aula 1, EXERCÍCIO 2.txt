@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#define TAXA 0.1 
+int main ()
+{
+    setlocale(LC_ALL, "Portuguese");
+    float gasto, total;
+    
+    printf("Digite o valor da conta -> ");
+    scanf("%f", &gasto);
+    
+    total = gasto + (gasto * TAXA);
+    
+    printf("\n\nO total a ser pago é = R$%.2f", total);
+    
+   
+   return 0;
+}

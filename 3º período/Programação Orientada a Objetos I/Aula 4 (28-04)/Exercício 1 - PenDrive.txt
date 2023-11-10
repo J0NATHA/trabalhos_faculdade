@@ -1,0 +1,136 @@
+
+package aula4;
+
+import java.util.Scanner;
+
+public class PenDrive {
+    String marca;
+    int capacidade;
+    double comprimento,
+            largura,
+            profundidade,
+            peso,
+            preco;
+    
+    public void setMarca(String novaMarca)
+    {
+        if(!novaMarca.isEmpty())
+        {
+            marca = novaMarca;
+        }  
+    }
+    
+    public void setCapacidade(int novaCapacidade)
+    {
+        if(novaCapacidade > 0)
+        {
+            capacidade = novaCapacidade;
+        }
+    }
+    
+    public void setComprimento(double novoComprimento)
+    {
+        if (novoComprimento > 0)
+        {
+            comprimento = novoComprimento;
+        }
+    }
+    
+    public void setLargura(double novaLargura)
+    {
+        if (novaLargura > 0.0)
+        {
+            largura = novaLargura;
+        }
+    }
+    
+    public void setProfundidade(double novaProfundidade)
+    {
+        if (novaProfundidade > 0.0)
+        {
+            profundidade = novaProfundidade;
+        }
+    }
+    
+    public void setPeso(double novoPeso)
+    {
+        if (novoPeso > 0.0)
+        {
+            peso = novoPeso;
+        }
+    }
+    
+    public void setPreco(double novoPreco)
+    {
+        if (novoPreco > 0.0)
+        {
+            preco = novoPreco;
+        }
+    }
+    
+    public String getMarca()
+    {
+        return marca;
+    }
+    
+    public int getCapacidade()
+    {
+        return capacidade;
+    }
+    
+    public double getComprimento()
+    {
+        return comprimento;
+    }
+    
+    public double getLargura()
+    {
+        return largura;
+    }
+    
+    public double getProfundidade()
+    {
+        return profundidade;
+    }
+    
+    public double getPeso()
+    {
+        return peso;
+    }
+    
+    public double getPreco()
+    {
+        return preco;
+    }
+    
+    public void definirPropriedades()
+    {
+        Scanner ent = new Scanner(System.in);
+        
+        System.out.print("Entre com o nome da marca -> ");
+        setMarca(ent.nextLine());
+        System.out.print("Entre com a Capacidade -> ");
+        setCapacidade(Integer.parseInt(ent.nextLine()));
+        System.out.print("Entre com o comprimento -> ");
+        setComprimento(Double.parseDouble(ent.nextLine()));
+        System.out.print("Entre com a largura -> ");
+        setLargura(Double.parseDouble(ent.nextLine()));
+        System.out.print("Entre com a profundidade -> ");
+        setProfundidade(Double.parseDouble(ent.nextLine()));
+        System.out.print("Entre com o peso -> ");
+        setPeso(Double.parseDouble(ent.nextLine()));
+        System.out.print("Entre com o preço -> ");
+        setPreco(Double.parseDouble(ent.nextLine()));
+    }
+    
+    public void imprimir()
+    {
+        System.out.println("Marca       : " + getMarca());
+        System.out.println("Capacidade  : " + getCapacidade());
+        System.out.println("Comprimento : " + getComprimento());
+        System.out.println("Largura     : " + getLargura());
+        System.out.println("Profundidade: " + getProfundidade());
+        System.out.println("Peso        : " + getPeso());
+        System.out.println("Preço       : " + getPreco());
+    }
+}

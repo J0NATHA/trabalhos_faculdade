@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+ int n, nT, contT=1, cont;
+ double t1=1,t2=1,t3=2;
+
+  scanf("%i",&nT);
+
+ while(contT<=nT){
+    do{
+      scanf("%i",&n);
+     }while(n<0 || n>60);
+
+    if(n==2)
+        printf("Fib(%i) = %.0lf\n",n,t2);
+    else if(n==1)
+        printf("Fib(%i) = %.0lf\n",n,t1);
+    else if(n==0)
+        printf("Fib(0) = 0\n");
+
+    else{
+        for(cont=3;cont<=n;cont++){
+            t3=t1+t2;
+            t1=t2;
+            t2=t3;
+        }
+        printf("Fib(%i) = %.0lf\n",n,t3);
+        t1=1;t2=1;t3=2;
+    }
+    contT++;
+}
+    return 0;
+}

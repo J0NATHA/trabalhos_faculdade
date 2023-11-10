@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.java": "java",
+        "fileapi.h": "c",
+        "fstream": "c"
+    }
+}

@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+int verifica_triangulo(float l1, float l2, float l3);
+void verifica_tipo_triangulo(float l1, float l2, float l3);
+
+int main()
+{
+   setlocale(LC_ALL,"");
+   float l1,l2,l3;
+   int sim;
+
+   printf("Digite os lados -> ");
+   scanf("%f %f %f",&l1,&l2,&l3);
+
+   sim = verifica_triangulo(l1,l2,l3);
+
+   if (sim == 1) verifica_tipo_triangulo(l1,l2,l3);
+   else  printf("\nNão forma triângulo\n");
+
+   return 0;
+}
+
+int verifica_triangulo(float l1, float l2, float l3)
+{
+    int sim;
+
+    if ((l1 < (l2 + l3)) && (l2 < (l1 + l3)) && (l3 < (l1 + l2))) sim = 1;
+    else sim = 0;
+
+    return sim;
+}
+
+void verifica_tipo_triangulo(float l1, float l2, float l3)
+{
+
+     if((l1==l2) && (l2==l3)) printf("\nEsquilátero\n");
+     else if ((l1 != l2) && (l2 != l3)) printf("\nEscaleno\n");
+     else printf("\nIsósceles\n");
+
+}

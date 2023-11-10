@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<locale.h>
+#include <math.h>
+#define TAM 10
+
+int main()
+{
+    setlocale(LC_ALL, "");
+    int i, val[TAM], prod=1;
+
+    for(i=0;i<TAM;i++){
+        printf("Valor %i -> ",i);
+        scanf("%i",&val[i]);
+        fflush(stdin);
+        if(val[i]%5 == 0)
+            printf("Múltiplo de 5 no índice %i\n",i);
+    }
+
+
+
+    return 0;
+}

@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+  int tam,i,j;
+  long long N;
+  char num[100];
+
+  scanf("%llu",&N);
+  sprintf(num, "%llu", N);
+  tam = strlen(num);
+
+  for(i=1; i<=tam; i++){
+     j= tam - i;
+     printf("%c", num[j]);
+  }
+     printf("\n");
+
+    return 0;
+}

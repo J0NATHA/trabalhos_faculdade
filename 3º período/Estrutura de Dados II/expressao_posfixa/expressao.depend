@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1615407655 source:d:\temp\expressao\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"TADs_pilha_fila_aloc_enc.h"
+
+1615407626 d:\temp\expressao\tads_pilha_fila_aloc_enc.h
+
+1615407852 source:d:\temp\expressao\main.c
+	<stdio.h>
+	<stdlib.h>
+	"TADs_pilha_fila_aloc_enc.h"
+
+1615407695 source:d:\temp\expressao\pilha.c
+	<stdio.h>
+	<stdlib.h>
+	"TADs_pilha_fila_aloc_enc.h"
+
+1615407655 source:\\laptop-ljdg36v4\_bot\particao 2\eugenio\cursos\unicarioca\disciplinas\metodologia_ativa\estrutura_dados\trabalhos\solucoes\expressao\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"TADs_pilha_fila_aloc_enc.h"
+
+1615407626 \\laptop-ljdg36v4\_bot\particao 2\eugenio\cursos\unicarioca\disciplinas\metodologia_ativa\estrutura_dados\trabalhos\solucoes\expressao\tads_pilha_fila_aloc_enc.h
+
+1615407852 source:\\laptop-ljdg36v4\_bot\particao 2\eugenio\cursos\unicarioca\disciplinas\metodologia_ativa\estrutura_dados\trabalhos\solucoes\expressao\main.c
+	<stdio.h>
+	<stdlib.h>
+	"TADs_pilha_fila_aloc_enc.h"
+
+1615407695 source:\\laptop-ljdg36v4\_bot\particao 2\eugenio\cursos\unicarioca\disciplinas\metodologia_ativa\estrutura_dados\trabalhos\solucoes\expressao\pilha.c
+	<stdio.h>
+	<stdlib.h>
+	"TADs_pilha_fila_aloc_enc.h"
+
+1615407655 source:c:\users\jonat\onedrive\햞ea de trabalho\c\codeblocks\expressao\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"TADs_pilha_fila_aloc_enc.h"
+
+1615407626 c:\users\jonat\onedrive\햞ea de trabalho\c\codeblocks\expressao\tads_pilha_fila_aloc_enc.h
+
+1615407695 source:c:\users\jonat\onedrive\햞ea de trabalho\c\codeblocks\expressao\pilha.c
+	<stdio.h>
+	<stdlib.h>
+	"TADs_pilha_fila_aloc_enc.h"
+
+1681921032 source:c:\users\jonat\onedrive\햞ea de trabalho\c\codeblocks\expressao\main.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	"TADs_pilha_fila_aloc_enc.h"
+

@@ -1,0 +1,85 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "locale.h"
+
+#define TAM_VET 10
+#define VERD 1
+#define FALSO 0
+#define ERRO -1
+
+
+void iniciaPilha(int *Topo){
+     *Topo = -1;
+}
+    
+int pilhaVazia(int *Topo){
+    if(*Topo == -1) return(VERD);
+    return(FALSO);
+}
+    
+int pilhaCheia(int *Topo){
+    if(*Topo == TAM_VET - 1) return(VERD);
+    return(FALSO);
+}
+    
+int push(float P[], int *Topo, float valor){
+    if(pilhaCheia(Topo)){
+        printf("Erro - Ins. Pilha cheia");
+        return(ERRO);
+    }
+    else {
+        (*Topo)++;
+        P[*Topo] = valor;
+    }
+    return (VERD);
+}
+
+int pop(float P[], int *Topo, float *valor){
+    if (pilhaVazia(Topo)) {
+        printf ( "Erro - Pilha vazia");
+        return(ERRO);
+    }
+    else{
+        *valor = P[*Topo];
+        (*Topo)--;
+    }
+    return(VERD);
+}
+
+void exibirVetor(float P[], int *Topo){
+    int i;
+    printf("\nExibir elementos preenchidos do Vetor\n");
+    for(i=0;i<=*Topo;i++){
+        printf("\nElemento [%d]: %.2f", i, P[i]);
+    }
+    printf("\n\n");
+}
+    
+int main()
+{   
+ setlocale(LC_ALL,"Portuguese");
+ float P[TAM_VET];
+ int Topo;
+ int ok, op=-1;
+ float dado;
+ iniciaPilha(&Topo);
+ while (op!=0){
+     printf("\n\nMenu\n1-Inserir\n2-Excluir\n3-Exibir Vetor\n0-Fim\nOpção-> ");
+     scanf("%d", &op);
+     if(op==1){
+         printf("\nDigite um número-> ");
+         scanf("%f", &dado);
+         push(P, &Topo, dado);
+     }
+     else if(op==2){
+         ok = pop(P,&Topo, &dado);
+         if(ok!=ERRO)
+            printf("\nElemento removido: %.2f", dado);
+     }
+     else if(op==3){
+         exibirVetor(P,&Topo);
+     }
+ }
+    
+    return 0;
+}

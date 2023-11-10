@@ -1,0 +1,55 @@
+# depslib dependency file v1.0
+1613492568 source:d:\temp\ca\comunicacao\arvore_binaria_busca.c
+	<stdio.h>
+	<stdlib.h>
+	"TAD_arvore_binaria_busca.h"
+
+1604546154 d:\temp\ca\comunicacao\tad_arvore_binaria_busca.h
+
+1613492535 source:d:\temp\ca\comunicacao\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"TAD_arvore_binaria_busca.h"
+
+1613492568 source:\\laptop-ljdg36v4\_bot\particao 2\eugenio\cursos\unicarioca\disciplinas\metodologia_ativa\estrutura_dados\trabalhos\solucoes\comunicacao\arvore_binaria_busca.c
+	<stdio.h>
+	<stdlib.h>
+	"TAD_arvore_binaria_busca.h"
+
+1604546154 \\laptop-ljdg36v4\_bot\particao 2\eugenio\cursos\unicarioca\disciplinas\metodologia_ativa\estrutura_dados\trabalhos\solucoes\comunicacao\tad_arvore_binaria_busca.h
+
+1613492535 source:\\laptop-ljdg36v4\_bot\particao 2\eugenio\cursos\unicarioca\disciplinas\metodologia_ativa\estrutura_dados\trabalhos\solucoes\comunicacao\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"TAD_arvore_binaria_busca.h"
+
+1613492570 source:e:\unicarioca\estrutura_dados\trabalhos\solucoes\comunicacao\arvore_binaria_busca.c
+	<stdio.h>
+	<stdlib.h>
+	"TAD_arvore_binaria_busca.h"
+
+1604546156 e:\unicarioca\estrutura_dados\trabalhos\solucoes\comunicacao\tad_arvore_binaria_busca.h
+
+1613492536 source:e:\unicarioca\estrutura_dados\trabalhos\solucoes\comunicacao\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"TAD_arvore_binaria_busca.h"
+
+1613492570 source:c:\users\jonat\downloads\comunicacao\arvore_binaria_busca.c
+	<stdio.h>
+	<stdlib.h>
+	"TAD_arvore_binaria_busca.h"
+
+1604546156 c:\users\jonat\downloads\comunicacao\tad_arvore_binaria_busca.h
+
+1686352740 source:c:\users\jonat\downloads\comunicacao\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<time.h>
+	<windows.h>
+	"TAD_arvore_binaria_busca.h"
+

@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, cont=3, t1=0,t2=1,t3;
+    do{
+      scanf("%i",&n);
+     }while(n<=0);
+
+    if(n==1)
+        printf("%i",t1);
+    else if(n==2)
+        printf("%i",t2);
+
+    else{
+        for(cont=3;cont<=n;cont++){
+            t3=t1+t2;
+            t1=t2;
+            t2=t3;
+        }
+        printf("%i",t3);
+    }
+
+    return 0;
+}

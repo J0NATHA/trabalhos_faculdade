@@ -1,0 +1,88 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define TAM 12
+
+int main()
+{
+ int i,j;
+ double soma=0.0, mat[TAM][TAM];
+ char O;
+
+ do{
+  O = getchar();
+ }while(O != 'S' && O != 'M');
+
+ for(i=0;i<TAM;i++){
+    for(j=0;j<TAM;j++){
+        scanf("%lf",&mat[i][j]);
+
+        switch(i){
+         case 7:
+             switch(j){
+             case 5:
+             case 6:
+                    soma += mat[i][j];
+                    break;
+             }break;
+         case 8:
+              switch(j){
+             case 4:
+             case 5:
+             case 6:
+             case 7:
+                    soma += mat[i][j];
+                    break;
+             }  break;
+         case 9:
+            switch(j){
+             case 3:
+             case 4:
+             case 5:
+             case 6:
+             case 7:
+             case 8:
+                    soma += mat[i][j];
+                    break;
+             }break;
+         case 10:
+                 switch(j){
+             case 2:
+             case 3:
+             case 4:
+             case 5:
+             case 6:
+             case 7:
+             case 8:
+             case 9:
+                    soma += mat[i][j];
+                    break;
+             }break;
+         case 11:
+                 switch(j){
+             case 1:
+             case 2:
+             case 3:
+             case 4:
+             case 5:
+             case 6:
+             case 7:
+             case 8:
+             case 9:
+             case 10:
+                    soma += mat[i][j];
+                    break;
+        }break;
+
+    }
+  }
+ }
+
+  if(O == 'S')
+    printf("%.1lf\n", soma);
+
+  else
+    printf("%.1lf\n",soma/30);
+
+
+    return 0;
+}

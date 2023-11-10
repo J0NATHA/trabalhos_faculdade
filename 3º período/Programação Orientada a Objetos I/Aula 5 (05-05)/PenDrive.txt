@@ -1,0 +1,244 @@
+package aula5;
+
+import java.util.Scanner;
+
+public class PenDrive {
+    String marca,
+            modelo;
+    int capacidade;
+    double comprimento,
+            largura,
+            profundidade,
+            peso,
+            preco;
+    
+    public PenDrive() { }
+    
+    public PenDrive(String m)
+    {
+        marca = m;
+    }
+    
+    public PenDrive(String ma, String mo)
+    {
+        marca = ma;
+        modelo = mo;
+    }
+    
+    public PenDrive(String marca, int capacidade)
+    {
+        setMarca(marca);
+        setCapacidade(capacidade);
+    }
+    
+    public PenDrive(String ma, double co)
+    {
+        marca = ma;
+        comprimento = co;
+    }
+    
+    public PenDrive(String ma, String mo, double co)
+    {
+        marca = ma;
+        modelo = mo;
+        comprimento = co;
+    }
+                        
+    public PenDrive(String ma, double co, double la)
+    {
+        marca = ma;
+        comprimento = co;
+        largura = la;
+    }
+    
+    public void setModelo()
+    {
+        modelo = "";
+    }
+    
+    public void setModelo(String novoModelo)
+    {
+        if(!novoModelo.isEmpty())
+        {
+            modelo = novoModelo;
+        }
+    }
+    
+    public void setMarca(String novaMarca)
+    {
+        if(!novaMarca.isEmpty())
+        {
+            marca = novaMarca;
+        }  
+    }
+    
+    public void setMarca()
+    {
+        marca = "";
+    }
+    
+    public void setCapacidade(int novaCapacidade)
+    {
+        if(novaCapacidade > 0)
+        {
+            capacidade = novaCapacidade;
+        }
+    }
+    
+    public void setCapacidade()
+    {
+        capacidade = 0;
+    }
+    
+    public void setComprimento(double novoComprimento)
+    {
+        if (novoComprimento > 0)
+        {
+            comprimento = novoComprimento;
+        }
+    }
+    
+    public void setComprimento()
+    {
+        comprimento = 0.0;
+    }
+    
+    public void setLargura(double novaLargura)
+    {
+        if (novaLargura > 0.0)
+        {
+            largura = novaLargura;
+        }
+    }
+    
+    public void setLargura()
+    {
+        largura = 0.0;
+    }
+    
+    public void setProfundidade(double novaProfundidade)
+    {
+        if (novaProfundidade > 0.0)
+        {
+            profundidade = novaProfundidade;
+        }
+    }
+    
+    public void setProfundidade()
+    {
+        profundidade = 0.0;
+    }
+    
+    public void setPeso(double novoPeso)
+    {
+        if (novoPeso > 0.0)
+        {
+            peso = novoPeso;
+        }
+    }
+    
+    public void setPeso()
+    {
+        peso = 0.0;
+    }
+    
+    public void setPreco(double novoPreco)
+    {
+        if (novoPreco > 0.0)
+        {
+            preco = novoPreco;
+        }
+    }
+    
+    public void setPreco()
+    {
+        preco = 0.0;
+    }
+    
+    public String getMarca()
+    {
+        return marca;
+    }
+    
+    public String getModelo()
+    {
+        return modelo;
+    }
+    
+    public int getCapacidade()
+    {
+        return capacidade;
+    }
+    
+    public double getComprimento()
+    {
+        return comprimento;
+    }
+    
+    public double getLargura()
+    {
+        return largura;
+    }
+    
+    public double getProfundidade()
+    {
+        return profundidade;
+    }
+    
+    public double getPeso()
+    {
+        return peso;
+    }
+    
+    public double getPreco()
+    {
+        return preco;
+    }
+    
+    public void entrada()
+    {
+        Scanner ent = new Scanner(System.in);
+        
+        System.out.print("Entre com o nome da marca -> ");
+        setMarca(ent.nextLine());
+        System.out.print("Entre com o nome do modelo ->");
+        setModelo(ent.nextLine());
+        System.out.print("Entre com a capacidade -> ");
+        setCapacidade(Integer.parseInt(ent.nextLine()));
+        System.out.print("Entre com o comprimento -> ");
+        setComprimento(Double.parseDouble(ent.nextLine()));
+        System.out.print("Entre com a largura -> ");
+        setLargura(Double.parseDouble(ent.nextLine()));
+        System.out.print("Entre com a profundidade -> ");
+        setProfundidade(Double.parseDouble(ent.nextLine()));
+        System.out.print("Entre com o peso -> ");
+        setPeso(Double.parseDouble(ent.nextLine()));
+        System.out.print("Entre com o preço -> ");
+        setPreco(Double.parseDouble(ent.nextLine()));
+    }
+    
+    public void cadastrar(String ma, String mo, int ca, double co, double la, 
+            double po, double pe, double pr)
+    {
+        setMarca(ma);
+        setModelo(mo);
+        setCapacidade(ca);
+        setComprimento(co);
+        setLargura(la);
+        setProfundidade(po);
+        setPeso(pe);
+        setPreco(pr);
+    }
+    
+    public void imprimir()
+    {
+        System.out.println("Marca       : " + getMarca());
+        System.out.println("Modelo      : " + getModelo());
+        System.out.println("Capacidade  : " + getCapacidade());
+        System.out.println("Comprimento : " + getComprimento());
+        System.out.println("Largura     : " + getLargura());
+        System.out.println("Profundidade: " + getProfundidade());
+        System.out.println("Peso        : " + getPeso());
+        System.out.println("Preço       : " + getPreco());
+    }
+}

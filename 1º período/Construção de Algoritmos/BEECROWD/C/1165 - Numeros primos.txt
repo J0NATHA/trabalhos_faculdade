@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main() {
+  int N, X, i, cont=0;
+
+  do{
+    scanf("%i",&N);
+    fflush(stdin);
+  }while(N>100 && N<0);
+
+  while(cont<N){
+    cont++;
+    do{
+     scanf("%i",&X);
+     fflush(stdin);
+    }while(!(X<=pow(10,7) && X>1));
+    for(i=2;i<X;i++){
+     if(X % i == 0){
+        printf("%i nao eh primo\n",X);
+        fflush(stdout);
+        break;
+     }
+    }if(X==i){
+        printf("%i eh primo\n",X);
+       fflush(stdout);
+     }
+  }
+
+
+    return 0;
+}

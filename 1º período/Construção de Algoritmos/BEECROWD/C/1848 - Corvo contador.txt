@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+  int num, qtd=0,i ;
+  char entrada[10];
+  float soma=0.0;
+
+ do{
+
+  qtd++;
+
+  do{
+
+    gets(entrada);
+
+    if(strlen(entrada) > 2){
+
+     for(i=0; i<3; i++){
+
+      if(entrada[i] != '*' && entrada[i] != '-') break;
+      else {if(entrada[i] == '*') soma+=pow(2,(2-i));}
+
+     }
+    }
+
+
+  }while(strcmp(entrada,"caw caw"));
+
+   if(soma>1000) soma = 1000;
+   printf("%.0f\n",soma);
+   soma=0.0;
+
+ }while(qtd<3);
+
+    return 0;
+}

@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct fila
+{
+  int inicio;
+  int termino;
+  int tamanho;
+  int elemento[10];
+};
+int main()
+{
+  int i;
+  struct fila F;
+
+  F.inicio = 0;
+  F.termino = -1;
+  F.tamanho = 0;
+
+  if(F.tamanho <= 10){
+    for (i = 0; i <= 9; i++){
+      printf("Digite o elemento a ser inserido na FILA ");
+      scanf("%i", &F.elemento[(F.termino % 10) + 1]);
+      F.termino = ((F.termino % 10) + 1);
+      F.tamanho = F.tamanho + 1;
+       
+    }
+  }
+  else{
+    printf(" Fila cheia. ");
+  }
+  
+  printf("\n");
+  printf("Inicio da Fila esta na posicao: %i \n", F.inicio);
+  printf("Termino da Fila esta na posicao: %i \n", F.termino);
+  printf("o tamanho da fila é : %d \n", F.tamanho);
+  printf("\n");
+
+  if (F.tamanho >= 3) {
+    for(i=0; i <= 2; i++){
+      printf("Elemento removido é: %i \n", F.elemento[F.inicio]);
+      F.inicio = (F.inicio % 10) + 1;
+      F.tamanho = F.tamanho - 1;
+      }
+    }
+  else{
+    printf(" Remoção inválida. ");
+  }
+  printf("\n");  
+  if (F.tamanho <= 8){
+    for (i = 0; i <= 1; i++){
+      printf("digite o elemento a ser inserido na FILA ");
+      scanf("%i", &F.elemento[(F.termino % 10) + 1]);
+      F.termino = ((F.termino % 10) + 1);
+      F.tamanho = F.tamanho + 1;
+    }
+  }
+  else{
+    printf("Fila cheia. ");
+  }
+
+  printf("\n");
+  printf("inicio da fila esta na posicao : %i \n", F.inicio);
+  printf("termino da fila esta na posicao : %i \n", F.termino);
+  printf("o tamanho da FILA : %i \n", F.tamanho);
+  return 0;
+}

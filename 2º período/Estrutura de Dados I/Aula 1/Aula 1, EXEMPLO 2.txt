@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main ()
+{
+    setlocale(LC_ALL, "Portuguese");
+   
+   int a, s;
+    
+    printf("Digite um valor inteiro (int) ");
+    scanf("%d", &a);
+    
+    if(a > 5){
+        s = a * 3;
+    }
+    else{
+        s = a + 2;
+    }
+    
+    printf("\n\nS = %d", s);
+    
+    return 0;
+
+}

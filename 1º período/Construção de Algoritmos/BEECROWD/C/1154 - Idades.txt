@@ -1,0 +1,21 @@
+#include <stdio.h>
+ 
+int main() {
+  int idade,soma=0,cont=0;
+    float media;
+
+    scanf("%i",&idade);
+
+    do{
+     soma += idade;
+     cont++;
+     scanf("%i",&idade);
+     fflush(stdin);
+    }while(idade>=0);
+
+    media = (float)soma / cont;
+    fflush(stdout);
+    printf("%.2f\n",media);
+
+    return 0;
+}

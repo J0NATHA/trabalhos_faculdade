@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
+
+int main()
+{
+    setlocale(LC_ALL,"");
+  //struct aluno
+    typedef struct aluno
+    {
+     char nome[30];
+     int matricula;
+     float CR;
+    } t_aluno;
+
+    t_aluno aluno,aluno_2;
+    aluno.matricula=1234;
+    aluno.CR=2.9;
+    strcpy(aluno.nome,"Bruno");
+
+    aluno_2 = aluno;
+    printf("\nNome: %s",aluno.nome);
+    printf("\nMatriculo: %i",aluno.matricula);
+    printf("\nCR: %.1f",aluno.CR);
+
+    printf("\n\nNome: %s",aluno_2.nome);
+    printf("\nMatriculo: %i",aluno_2.matricula);
+    printf("\nCR: %.1f\n",aluno_2.CR);
+
+
+
+
+    return 0;
+}

@@ -1,0 +1,24 @@
+ body{
+      background-image:linear-gradient(to left, #ffffff, #afb7db);
+      width:1200px;
+      padding: 10px 30px 30px 30px;
+     }
+
+ .principal{
+	    background-color:white; border-radius:10px;
+	    width 1000px; padding 10px; margin:auto;
+	   }
+ h1{
+    border-style:inset;
+    color: #5e1414; text-align:center;
+   }
+ .final{
+        border-radius:10px;
+	width:1190px; padding: 5px;
+	margin:auto;
+	background-image: url("foto2.png");
+	text-align:center;
+	font-family:arial; color:yellow; font-size:50px;
+       }
+ .texto{font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+	    

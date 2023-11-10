@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1473705320 source:d:\eugenio\cursos\uezo\ed_ii\unidade_iii\exemplo_1\main.c
+	<stdio.h>
+	<locale.h>
+	"ordenacao.h"
+
+1453547797 d:\eugenio\cursos\uezo\ed_ii\unidade_iii\exemplo_1\ordenacao.h
+
+1477265432 source:d:\eugenio\cursos\uezo\ed_ii\unidade_iii\exemplo_1\ordenacao.c
+	<stdio.h>
+	"ordenacao.h"
+
+1600232846 source:d:\eugenio\cursos\uezo\ed_ii\exemplos\unidade_iii\exemplo_1\main.c
+	<stdio.h>
+	<locale.h>
+	"ordenacao.h"
+
+1453547798 d:\eugenio\cursos\uezo\ed_ii\exemplos\unidade_iii\exemplo_1\ordenacao.h
+
+1600232976 source:d:\eugenio\cursos\uezo\ed_ii\exemplos\unidade_iii\exemplo_1\ordenacao.c
+	<stdio.h>
+	"ordenacao.h"
+
+1613485906 source:c:\_bot\particao 2\eugenio\cursos\uezo\ed_ii\exemplos\unidade_iii\exemplo_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<locale.h>
+	"ordenacao.h"
+
+1453547798 c:\_bot\particao 2\eugenio\cursos\uezo\ed_ii\exemplos\unidade_iii\exemplo_1\ordenacao.h
+
+1613485578 source:c:\_bot\particao 2\eugenio\cursos\uezo\ed_ii\exemplos\unidade_iii\exemplo_1\ordenacao.c
+	<stdio.h>
+	<stdlib.h>
+	"ordenacao.h"
+
+1613485906 source:\\laptop-ljdg36v4\_bot\particao 2\eugenio\cursos\uezo\disciplinas\ed_ii\exemplos\unidade_iii\exemplo_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<locale.h>
+	"ordenacao.h"
+
+1453547798 \\laptop-ljdg36v4\_bot\particao 2\eugenio\cursos\uezo\disciplinas\ed_ii\exemplos\unidade_iii\exemplo_1\ordenacao.h
+
+1613487323 source:\\laptop-ljdg36v4\_bot\particao 2\eugenio\cursos\uezo\disciplinas\ed_ii\exemplos\unidade_iii\exemplo_1\ordenacao.c
+	<stdio.h>
+	<stdlib.h>
+	"ordenacao.h"
+
+1684615647 source:c:\users\jonat\downloads\exemplo_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<locale.h>
+	"ordenacao.h"
+
+1453547798 c:\users\jonat\downloads\exemplo_1\ordenacao.h
+
+1683850233 source:c:\users\jonat\downloads\exemplo_1\ordenacao.c
+	<stdio.h>
+	<stdlib.h>
+	"ordenacao.h"
+

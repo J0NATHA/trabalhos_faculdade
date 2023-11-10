@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#define TAXA 0.1 
+int main ()
+{
+    setlocale(LC_ALL, "Portuguese");
+    float notas,soma=0,media;
+    int i;
+    
+    for(i=0;i<=2;i++){
+        printf("Entre com a nota %i->", i+1);
+        scanf("%f",&notas);
+        soma+=notas;
+    }
+    
+    media = soma / 3.0;
+    
+    printf("\nA média do aluno é %.2f",media);
+    if(media>=7)
+        printf("\nO aluno foi aprovado");
+    else
+        printf("\nO aluno foi reprovado");
+
+   return 0;
+}

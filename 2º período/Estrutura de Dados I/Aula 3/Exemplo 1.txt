@@ -1,0 +1,92 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define TAM_VET 5
+#define VERD 1
+#define FALSO 0
+#define ERRO -1
+
+void Inicia_Fila (int *inicio, int *termino)
+{
+  *inicio = 0;
+  *termino = -1;
+}
+
+int Fila_Vazia (int inicio, int termino)
+{
+  if(inicio > termino) return(VERD);
+  return(FALSO);
+}
+
+int Fila_Cheia (int termino)
+{
+  if (termino == TAM_VET-1) return(VERD);
+  return(FALSO);
+}
+int Insere_Fila (float F[], int *termino, float x)
+{
+  if(*termino == TAM_VET - 1){
+    printf("Erro - Ins. Fila cheia");
+    return(ERRO);
+  }
+  else{
+    (*termino)++;
+    F[*termino] = x;
+  }
+  return (VERD);
+}
+
+int Remove_Fila (float F[], int *inicio, int *termino, float *x)
+{
+  if (*inicio > *termino){
+    printf ("ERRO - Fila vazia");
+    return(ERRO);
+  }
+  else{
+    *x = F[*inicio];
+    (*inicio)++;
+  }
+  return(VERD);
+}
+
+void Listar (float F[], int *inicio, int *termino)
+{
+  int i;
+  printf("\nListar Fila:");
+  printf("\n  Inicio:%2i e Termino:%2i", *inicio, *termino);
+  for(i=*inicio; i <= *termino; i++){
+    printf("\n  F[%2i] %.2f", i, F[i]);
+  }
+}
+
+int main()
+{
+  float F[TAM_VET];
+  int inicio, termino;
+  int ok, op=0;
+  float dado;
+  Inicia_Fila(&inicio, &termino);
+
+  while (op != 5){
+    printf("\n\nMenu\n1-Inserir\n2-Excluir");
+    printf("\n3-Listar\n4-Reiniciar Fila");
+    printf("\n5-Fim\nOpçao: ");
+    scanf("%d", &op);
+    if( op == 1){
+      printf("\nDigite um numero: ");
+      scanf("%f", &dado);
+      Insere_Fila(F, &termino, dado);
+    }
+    else if( op == 2){
+      ok = Remove_Fila(F, &inicio, &termino, &dado);
+      if (ok != ERRO)
+        printf( "\nElemento removido: %f ", dado);
+    }
+    else if( op == 3){
+      Listar(F, &inicio, &termino);
+    }
+    else if( op == 4){
+      Inicia_Fila(&inicio, &termino);
+    }
+  }return 0;
+}

@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main ()
+{
+    setlocale(LC_ALL, "Portuguese");
+    int a, total=0;
+    int c=1;
+    
+    while(c<10){
+        printf("Digite um valor inteiro (int)");
+        scanf("%d", &a);
+        total += a;
+        c++;
+    }
+    
+    printf("\nc= %d", c);
+    printf("\n\na= %d e total= %i", a, total);
+    
+   return 0;
+}

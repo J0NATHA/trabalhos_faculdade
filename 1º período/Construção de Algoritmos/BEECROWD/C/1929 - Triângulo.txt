@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+ int graveto[4], i,j,k, n=1;
+
+  for(i=0; i<4; i++){
+   scanf("%i",&graveto[i]);
+  }
+
+  for(i=0; i<4; i++){
+    for(j=i+1; j<4; j++){
+      for(k=j+1; k<4; k++){
+        if(graveto[i]<graveto[j] + graveto[k] && graveto[j]<graveto[i] + graveto[k] && graveto[k]<graveto[j] + graveto[i]) n=0;
+      }
+    }
+  }
+
+  if(n) printf("N\n");
+  else printf("S\n");
+
+    return 0;
+}

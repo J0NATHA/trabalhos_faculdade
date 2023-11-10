@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+  int T, i, vet[5], S=0;
+
+ do {scanf("%i",&T);} while (!(T>=1 && T<=4));
+
+ for(i=0; i<5; i++){
+
+   do {scanf("%i",&vet[i]);} while(vet[i]>4 || vet[i]<1);
+
+    if(vet[i] == T) S++;
+ }
+
+ printf("%i\n",S);
+
+    return 0;
+}

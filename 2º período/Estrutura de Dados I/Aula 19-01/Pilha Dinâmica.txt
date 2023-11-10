@@ -1,0 +1,111 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "locale.h"
+#include <malloc.h>
+#define VERD 1 
+#define FALSO 0
+
+typedef struct Item{
+    int numero;
+    struct Item *anterior;
+} Elemento;
+
+void Inicializar(Elemento **topo) {
+    *topo = NULL;
+}
+
+int EstaVazia(Elemento **topo) {
+    if(*topo == NULL)
+        return VERD;
+    else
+        return FALSO;
+}
+
+void Empilhar(Elemento **topo, int elemento){
+    Elemento *novo;
+    
+    novo = (Elemento *) malloc(sizeof(Elemento));
+    
+    novo -> numero = elemento;
+    
+    novo -> anterior = *topo;
+    
+    *topo = novo;
+}
+
+int Desempilhar(Elemento **topo) {
+    Elemento *antigo;
+    antigo = *topo;
+    int result;
+    if(EstaVazia(topo)){
+        printf("\n Pilha vazia! \n");
+    }
+    else {
+        result = (*topo)->numero;
+        *topo = (*topo)->anterior;
+        free(antigo);
+        return result;
+    }
+    return -1;
+}
+
+void MostraPilha(Elemento *topo){
+    int i = 0;
+    Elemento *item;
+    printf("\n\n Listando...\n\n");
+    printf("--------------------------\n");
+    if (EstaVazia(&topo)){
+        printf("A Pilha esta vazia!\n");
+    }
+    else {
+        item = topo;
+        printf("\nItem Valor    Endereco Ativo      Endereco Anterior\n");
+        while(item != NULL){
+            i++;
+            printf("[%2d] -> %2d        :%p                  :%p\n", i, item->numero, item, item->anterior);
+            item = item->anterior;
+        }
+    }
+    printf("------------------------------------------\n\n");
+}
+
+void Menu(){
+    printf("\n\nDigite a sua escolha: \n"
+        "    1 - Empilhar elemento\n"
+        "    2 - Desempilhar \n"
+        "    3 - Finalizar \n"
+        "? ");
+}
+
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+    Elemento *topo;
+    Inicializar(&topo);
+    int opcao;
+    int numero;
+    Menu();
+    scanf("%i", &opcao);
+    while(opcao != 3){
+        switch (opcao){
+            case 1:
+                printf("Digite um numero: ");
+                scanf("\n %d", &numero);
+                Empilhar(&topo, numero);
+                MostraPilha(topo);
+                break;
+            case 2:
+                numero = Desempilhar(&topo);
+                if(numero  != -1)
+                    printf("\nValor do elemnteo desempilhado %d", numero);
+                MostraPilha(topo);
+                break;
+            default:
+                printf("Escolha invalida.\n\n");
+                break;
+        }
+        Menu();
+        scanf("%d", &opcao);
+    }
+    return 0;
+}
